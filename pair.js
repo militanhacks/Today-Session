@@ -66,7 +66,7 @@ router.get('/', async (req, res) => {
         const { version } = await fetchLatestBaileysVersion();
         const { state, saveCreds } = await useMultiFileAuthState(path.join(sessionDir, sessionId));
 
-        try {
+      try {
             const sock = makeWASocket({
                 version,
                 auth: {
@@ -75,14 +75,13 @@ router.get('/', async (req, res) => {
                 },
                 printQRInTerminal: false,
                 logger: pino({ level: "fatal" }),
-                browser: Browsers.macOS(config.webName),
+                browser: ['MLTN-MD', 'Chrome', '1.0.0'],
                 syncFullHistory: false,
                 generateHighQualityLinkPreview: true,
                 markOnlineOnConnect: true,
                 connectTimeoutMs: 60000,
                 keepAliveIntervalMs: 30000
             });
-
             if (!sock.authState.creds.registered) {
                 await delay(2000);
                 const pairingCode = await sock.requestPairingCode(phoneNumber);
@@ -92,7 +91,7 @@ router.get('/', async (req, res) => {
                     responseSent = true;
                     return res.json({ code: pairingCode });
                 }
-            }
+            }}
 
             sock.ev.on('creds.update', saveCreds);
 
