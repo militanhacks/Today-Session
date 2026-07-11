@@ -56,9 +56,7 @@ router.get('/', async (req, res) => {
     }
     
     // Default prefix if needed
-    if (!phoneNumber.startsWith('92') && phoneNumber.length === 10) {
-        phoneNumber = '92' + phoneNumber;
-    }
+    
 
     console.log(`[PAIR] Generating for: ${phoneNumber}`);
 
