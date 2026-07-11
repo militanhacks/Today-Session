@@ -1,34 +1,25 @@
 # ============================================================================
-# @project Today-Session
+# @project MLTN-MD Session Generator
 # @title WhatsApp Session ID Generator
-# @author LavvorStudio
-# @copyright 2026 LavvorStudio. All rights reserved.
+# @author MLTN
+# @copyright 2026 MLTN. All rights reserved.
 # @version 1.0.0
-# @date 09 April 2026
-# @license MIT
-# @repository https://github.com/Lavvordev/Today-Session
+# @repository https://github.com/militanhacks/Today-Session
 # ============================================================================
 # Generate WhatsApp Session IDs, QR, Pairing Code
-# One File Customization, Easy Deploy, Fast Setup
+# Forked and customized from Today-Session by LavvorStudio
 # ============================================================================
-# @note This software is property of LavvorStudio
-# @note Developers can use this for their own bot projects
-# @note But claiming as your own or removing credits is prohibited
-# @note You may modify and customize for personal use
-# @note Commercial use requires prior permission
-# ============================================================================
-
-webName=Today Session
-webLogoUrl=https://i.postimg.cc/wTHBDF5J/Today-Session-logo.png
-companyName=LavvorStudio
-companyTagline=Build apps, WhatsApp bots, and websites
-primaryColor=8B5CF6
-secondaryColor=14B8A6
-sessionPrefix=TODAY:~
+webName=MLTN-MD
+webLogoUrl=https://i.ibb.co/wNStJ54H/image.png
+companyName=MLTN
+companyTagline=Arise. Summon your shadow session.
+primaryColor=9D00FF
+secondaryColor=6A0DAD
+sessionPrefix=MLTN;;;
 sessionMode=short
-githubRepo=https://github.com/Lavvordev/Today-Session
-whatsappChannel=https://whatsapp.com/channel/0029VbBr866KLaHfX8d5y32z
-supportEmail=support@lavvorstudio.com
+githubRepo=https://github.com/militanhacks
+whatsappChannel=https://wa.me/254713421283
+supportEmail=ephymawira817@gmail.com
 privacyPolicyUrl=/privacy
 termsUrl=/terms
-footerText=All rights reserved
+footerText=The shadows remember.
