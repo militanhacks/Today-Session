@@ -24,20 +24,20 @@ One File Customization, Easy Deploy, Fast Setup
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Today-Session | Pairing Code</title>
+    <title>MLTN-MD | Pairing Code</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background: #0f172a;
+            background: #0a0014;
             color: white;
         }
         .glass {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(157, 0, 255, 0.05);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(157, 0, 255, 0.15);
         }
         .btn-primary {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
@@ -45,17 +45,17 @@ One File Customization, Easy Deploy, Fast Setup
         }
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px -5px rgba(var(--primary-rgb), 0.4);
+            box-shadow: 0 10px 25px -5px rgba(var(--primary-rgb), 0.5);
         }
         .input-glass {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(157, 0, 255, 0.05);
+            border: 1px solid rgba(157, 0, 255, 0.2);
             transition: all 0.3s ease;
         }
         .input-glass:focus {
             outline: none;
             border-color: var(--primary);
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(157, 0, 255, 0.1);
         }
         .loader {
             width: 20px;
@@ -69,7 +69,6 @@ One File Customization, Easy Deploy, Fast Setup
             to { transform: rotate(360deg); }
         }
         
-        /* Animated Background */
         .bg-animation {
             position: fixed;
             top: 0;
@@ -77,7 +76,7 @@ One File Customization, Easy Deploy, Fast Setup
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: #0f172a;
+            background: #0a0014;
             overflow: hidden;
         }
         .bg-glow {
@@ -86,7 +85,7 @@ One File Customization, Easy Deploy, Fast Setup
             height: 800px;
             background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
             border-radius: 50%;
-            opacity: 0.15;
+            opacity: 0.2;
             filter: blur(80px);
             pointer-events: none;
             animation: float 20s infinite alternate ease-in-out;
@@ -99,7 +98,7 @@ One File Customization, Easy Deploy, Fast Setup
             height: 600px;
             background: radial-gradient(circle, var(--secondary) 0%, transparent 70%);
             border-radius: 50%;
-            opacity: 0.1;
+            opacity: 0.15;
             filter: blur(80px);
             pointer-events: none;
             animation: float 25s infinite alternate-reverse ease-in-out;
@@ -109,29 +108,31 @@ One File Customization, Easy Deploy, Fast Setup
             50% { transform: translate(10%, 15%) scale(1.1); }
             100% { transform: translate(-5%, -10%) scale(0.9); }
         }
+        .savage-glow {
+            text-shadow: 0 0 20px rgba(157, 0, 255, 0.5);
+        }
     </style>
 </head>
 <body class="min-h-screen flex items-center justify-center p-6">
-    <!-- Animated Background -->
     <div class="bg-animation">
         <div class="bg-glow" style="top: -10%; left: -10%;"></div>
         <div class="bg-glow-2"></div>
     </div>
 
     <div class="glass p-8 md:p-12 rounded-[2.5rem] shadow-2xl max-w-md w-full text-center relative overflow-hidden">
-        <div class="absolute -top-24 -right-24 w-48 h-48 bg-purple-600/20 rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-24 -left-24 w-48 h-48 bg-teal-600/20 rounded-full blur-3xl"></div>
+        <div class="absolute -top-24 -right-24 w-48 h-48 bg-purple-600/25 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 -left-24 w-48 h-48 bg-fuchsia-600/20 rounded-full blur-3xl"></div>
 
         <div class="relative z-10">
             <div class="w-20 h-20 rounded-3xl overflow-hidden flex items-center justify-center mx-auto mb-8 shadow-xl">
                 <img id="page-logo" src="" alt="Logo" class="w-full h-full object-cover" referrerPolicy="no-referrer">
             </div>
             
-            <h1 class="text-3xl font-bold mb-2" id="web-name">Today Session</h1>
-            <p class="text-gray-400 mb-10">Enter your phone number with country code to generate a pairing code.</p>
+            <h1 class="text-3xl font-bold mb-2 savage-glow" id="web-name">MLTN-MD ⛧</h1>
+            <p class="text-gray-400 mb-10">Speak your number. The System will forge your code.</p>
 
             <div class="text-left mb-8">
-                <label class="block text-sm font-semibold text-gray-400 mb-3 uppercase tracking-widest">Phone Number</label>
+                <label class="block text-sm font-semibold text-gray-400 mb-3 uppercase tracking-widest">Hunter's Number</label>
                 <div class="relative">
                     <i class="fas fa-phone absolute left-5 top-1/2 -translate-y-1/2 text-gray-500"></i>
                     <input type="tel" id="phoneNumber" placeholder="923001234567" class="input-glass w-full py-4 pl-14 pr-6 rounded-2xl text-lg font-medium">
@@ -140,13 +141,13 @@ One File Customization, Easy Deploy, Fast Setup
             </div>
 
             <button id="generateBtn" class="btn-primary w-full py-4 rounded-2xl font-bold text-lg flex items-center justify-center gap-3 shadow-lg">
-                Generate Code
+                ⚔️ Forge the Code
             </button>
 
             <div id="result" class="mt-10 hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
-                <div class="p-6 rounded-3xl bg-white/5 border border-white/10">
-                    <h3 class="text-teal-400 font-bold mb-4 flex items-center justify-center gap-2">
-                        <i class="fas fa-check-circle"></i> Code Generated
+                <div class="p-6 rounded-3xl bg-purple-500/5 border border-purple-500/20">
+                    <h3 class="text-purple-400 font-bold mb-4 flex items-center justify-center gap-2">
+                        <i class="fas fa-check-circle"></i> The Code Has Awakened
                     </h3>
                     <div class="text-4xl font-mono font-bold tracking-[0.2em] text-white mb-6" id="codeText">---- ----</div>
                     <button id="copyBtn" class="w-full py-3 rounded-xl bg-white/10 hover:bg-white/20 transition-all font-semibold flex items-center justify-center gap-2">
@@ -159,7 +160,7 @@ One File Customization, Easy Deploy, Fast Setup
             </div>
 
             <a href="/" class="inline-block mt-10 text-sm font-medium text-gray-500 hover:text-white transition-colors">
-                <i class="fas fa-arrow-left mr-2"></i> Back to Home
+                <i class="fas fa-arrow-left mr-2"></i> Back to the Gate
             </a>
         </div>
     </div>
@@ -196,13 +197,13 @@ One File Customization, Easy Deploy, Fast Setup
 
         generateBtn.addEventListener('click', async () => {
             let phone = phoneInput.value.trim();
-            if (!phone) return alert('Please enter your WhatsApp number');
+            if (!phone) return alert('Speak your number, Hunter.');
             
             phone = phone.replace(/[^0-9]/g, '');
-            if (phone.length < 10) return alert('Please enter a valid phone number');
+            if (phone.length < 10) return alert('That number does not answer to the System.');
 
             generateBtn.disabled = true;
-            generateBtn.innerHTML = '<div class="loader"></div> Generating...';
+            generateBtn.innerHTML = '<div class="loader"></div> Forging...';
             resultDiv.classList.add('hidden');
 
             try {
@@ -213,14 +214,14 @@ One File Customization, Easy Deploy, Fast Setup
                     currentCode = data.code;
                     codeText.textContent = currentCode;
                     resultDiv.classList.remove('hidden');
-                    generateBtn.innerHTML = 'Generate Code';
+                    generateBtn.innerHTML = '⚔️ Forge the Code';
                     generateBtn.disabled = false;
                 } else {
-                    throw new Error(data.error || 'Failed to generate code');
+                    throw new Error(data.error || 'The forge has failed');
                 }
             } catch (error) {
                 alert('Error: ' + error.message);
-                generateBtn.innerHTML = 'Generate Code';
+                generateBtn.innerHTML = '⚔️ Forge the Code';
                 generateBtn.disabled = false;
             }
         });
