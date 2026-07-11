@@ -1,22 +1,7 @@
 /**
 ============================================================================
-@project Today-Session
-@title WhatsApp Session ID Generator
-@author LavvorStudio
-@copyright 2026 LavvorStudio. All rights reserved.
-@version 1.0.0
-@date 09 April 2026
-@license MIT
-@repository https://github.com/Lavvordev/Today-Session
-============================================================================
-Generate WhatsApp Session IDs, QR, Pairing Code
-One File Customization, Easy Deploy, Fast Setup
-============================================================================
-@note This software is property of LavvorStudio
-@note Developers can use this for their own bot projects
-@note But claiming as your own or removing credits is prohibited
-@note You may modify and customize for personal use
-@note Commercial use requires prior permission
+@project MLTN-MD Session Generator
+@author MLTN
 ============================================================================
 */
 import express from 'express';
@@ -54,9 +39,6 @@ router.get('/', async (req, res) => {
     if (phoneNumber.length < 10 || phoneNumber.length > 15) {
         return res.status(400).json({ error: 'Invalid phone number length' });
     }
-    
-    // Default prefix if needed
-    
 
     console.log(`[PAIR] Generating for: ${phoneNumber}`);
 
@@ -66,7 +48,7 @@ router.get('/', async (req, res) => {
         const { version } = await fetchLatestBaileysVersion();
         const { state, saveCreds } = await useMultiFileAuthState(path.join(sessionDir, sessionId));
 
-      try {
+        try {
             const sock = makeWASocket({
                 version,
                 auth: {
@@ -82,6 +64,7 @@ router.get('/', async (req, res) => {
                 connectTimeoutMs: 60000,
                 keepAliveIntervalMs: 30000
             });
+
             if (!sock.authState.creds.registered) {
                 await delay(2000);
                 const pairingCode = await sock.requestPairingCode(phoneNumber);
@@ -91,7 +74,7 @@ router.get('/', async (req, res) => {
                     responseSent = true;
                     return res.json({ code: pairingCode });
                 }
-            }}
+            }
 
             sock.ev.on('creds.update', saveCreds);
 
