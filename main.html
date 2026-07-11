@@ -25,20 +25,20 @@ One File Customization, Easy Deploy, Fast Setup
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Today-Session | WhatsApp Session Generator</title>
+    <title>MLTN-MD | Session Generator</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background: #0f172a;
+            background: #0a0014;
             color: white;
         }
         .glass {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(157, 0, 255, 0.05);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(157, 0, 255, 0.15);
         }
         .gradient-text {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
@@ -51,10 +51,9 @@ One File Customization, Easy Deploy, Fast Setup
         }
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px -5px rgba(var(--primary-rgb), 0.4);
+            box-shadow: 0 10px 25px -5px rgba(var(--primary-rgb), 0.5);
         }
         
-        /* Animated Background */
         .bg-animation {
             position: fixed;
             top: 0;
@@ -62,7 +61,7 @@ One File Customization, Easy Deploy, Fast Setup
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: #0f172a;
+            background: #0a0014;
             overflow: hidden;
         }
         .bg-glow {
@@ -71,7 +70,7 @@ One File Customization, Easy Deploy, Fast Setup
             height: 800px;
             background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
             border-radius: 50%;
-            opacity: 0.15;
+            opacity: 0.2;
             filter: blur(80px);
             pointer-events: none;
             animation: float 20s infinite alternate ease-in-out;
@@ -84,7 +83,7 @@ One File Customization, Easy Deploy, Fast Setup
             height: 600px;
             background: radial-gradient(circle, var(--secondary) 0%, transparent 70%);
             border-radius: 50%;
-            opacity: 0.1;
+            opacity: 0.15;
             filter: blur(80px);
             pointer-events: none;
             animation: float 25s infinite alternate-reverse ease-in-out;
@@ -94,96 +93,93 @@ One File Customization, Easy Deploy, Fast Setup
             50% { transform: translate(10%, 15%) scale(1.1); }
             100% { transform: translate(-5%, -10%) scale(0.9); }
         }
+        .savage-glow {
+            text-shadow: 0 0 20px rgba(157, 0, 255, 0.6), 0 0 40px rgba(157, 0, 255, 0.3);
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
-    <!-- Animated Background -->
     <div class="bg-animation">
         <div class="bg-glow" style="top: -10%; left: -10%;"></div>
         <div class="bg-glow-2"></div>
     </div>
 
-    <!-- Navbar -->
     <nav class="glass sticky top-0 z-50 px-6 py-4 flex items-center justify-between">
         <div class="flex items-center gap-2">
             <div class="w-10 h-10 rounded-xl overflow-hidden flex items-center justify-center">
                 <img id="nav-logo" src="" alt="Logo" class="w-full h-full object-cover" referrerPolicy="no-referrer">
             </div>
-            <span class="text-xl font-bold tracking-tight" id="nav-web-name">Today Session</span>
+            <span class="text-xl font-bold tracking-tight" id="nav-web-name">MLTN-MD ⛧</span>
         </div>
         <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
             <a href="#" class="hover:text-white transition-colors">Home</a>
             <a href="#about" class="hover:text-white transition-colors">About</a>
             <a href="#" id="nav-github" target="_blank" class="hover:text-white transition-colors">GitHub</a>
         </div>
-        <a href="#generate" class="px-5 py-2 rounded-full bg-white/10 hover:bg-white/20 transition-all text-sm font-semibold">Get Started</a>
+        <a href="#generate" class="px-5 py-2 rounded-full bg-white/10 hover:bg-white/20 transition-all text-sm font-semibold">Awaken Now</a>
     </nav>
 
-    <!-- Hero Section -->
     <section class="relative pt-24 pb-32 px-6 overflow-hidden">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-full pointer-events-none">
-            <div class="absolute top-0 left-0 w-96 h-96 bg-purple-600/20 rounded-full blur-[120px]"></div>
-            <div class="absolute bottom-0 right-0 w-96 h-96 bg-teal-600/20 rounded-full blur-[120px]"></div>
+            <div class="absolute top-0 left-0 w-96 h-96 bg-purple-600/25 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-fuchsia-600/20 rounded-full blur-[120px]"></div>
         </div>
         
         <div class="max-w-4xl mx-auto text-center relative z-10">
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
-                Generate Your <span class="gradient-text" id="hero-web-name">WhatsApp Session</span> Effortlessly
+            <p class="text-sm uppercase tracking-[0.3em] text-purple-400 mb-4 font-bold">☠️ The Gate Is Open ☠️</p>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight savage-glow">
+                Arise. Summon Your <span class="gradient-text" id="hero-web-name">Shadow Session</span>
             </h1>
             <p class="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto" id="hero-tagline">
-                The most reliable and secure way to connect your WhatsApp account to bots and applications.
+                No weak links. No hesitation. Link your WhatsApp and command your bot like a true Monarch.
             </p>
             
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4" id="generate">
                 <a href="/qr" target="_blank" class="btn-primary w-full sm:w-auto px-8 py-4 rounded-2xl font-bold text-lg flex items-center justify-center gap-3">
-                    <i class="fas fa-qrcode"></i> QR Code Method
+                    <i class="fas fa-qrcode"></i> Scan the Gate (QR)
                 </a>
-                <a href="/pair" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 transition-all font-bold text-lg flex items-center justify-center gap-3">
-                    <i class="fas fa-key"></i> Pairing Code Method
+                <a href="/pair" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-purple-500/30 transition-all font-bold text-lg flex items-center justify-center gap-3">
+                    <i class="fas fa-key"></i> Speak the Code (Pair)
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="py-24 px-6 bg-white/0">
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div class="glass p-8 rounded-3xl relative">
-                <div class="absolute -top-6 -right-6 w-24 h-24 bg-purple-500/20 rounded-full blur-2xl"></div>
-                <img src="https://picsum.photos/seed/tech/800/600" alt="About" class="rounded-2xl w-full h-auto shadow-2xl" referrerPolicy="no-referrer">
+                <div class="absolute -top-6 -right-6 w-24 h-24 bg-purple-500/25 rounded-full blur-2xl"></div>
+                <img src="https://picsum.photos/seed/shadow/800/600" alt="About" class="rounded-2xl w-full h-auto shadow-2xl" referrerPolicy="no-referrer">
             </div>
             <div>
                 <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
-                    <i class="fas fa-building text-purple-500"></i> About <span id="about-company-name">LavvorStudio</span>
+                    <i class="fas fa-skull text-purple-500"></i> Forged by <span id="about-company-name">MLTN</span>
                 </h2>
                 <p class="text-gray-400 text-lg leading-relaxed mb-8" id="about-description">
-                    We specialize in building cutting-edge applications, WhatsApp bots, and high-performance websites. Our tools are designed with developers and end-users in mind, ensuring seamless integration and top-tier security.
+                    Built from the shadows, tested in the void. This isn't just a session generator — it's the ritual that awakens your bot. Fast, secure, and built for hunters who don't wait around.
                 </p>
                 <div class="grid grid-cols-2 gap-6">
                     <div class="glass p-4 rounded-2xl">
                         <div class="text-2xl font-bold text-white mb-1">100%</div>
-                        <div class="text-xs text-gray-500 uppercase tracking-widest font-bold">Secure</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-widest font-bold">Unbreakable</div>
                     </div>
                     <div class="glass p-4 rounded-2xl">
                         <div class="text-2xl font-bold text-white mb-1">24/7</div>
-                        <div class="text-xs text-gray-500 uppercase tracking-widest font-bold">Uptime</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-widest font-bold">Never Sleeps</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-    <!-- Footer -->
-    <footer class="mt-auto py-12 px-6 border-t border-white/5 bg-black/20">
+    <footer class="mt-auto py-12 px-6 border-t border-purple-500/10 bg-black/40">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
             <div>
                 <div class="flex items-center gap-2 mb-4">
-                    <i class="fas fa-bolt text-purple-500"></i>
-                    <span class="text-lg font-bold" id="footer-web-name">Today-Session</span>
+                    <i class="fas fa-skull-crossbones text-purple-500"></i>
+                    <span class="text-lg font-bold" id="footer-web-name">MLTN-MD</span>
                 </div>
-                <p class="text-gray-500 text-sm" id="footer-text">© 2026 LavvorStudio. All rights reserved.</p>
+                <p class="text-gray-500 text-sm" id="footer-text">© 2026 MLTN. The shadows remember.</p>
             </div>
             <div class="flex gap-8 text-sm text-gray-400">
                 <a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
@@ -207,11 +203,9 @@ One File Customization, Easy Deploy, Fast Setup
                 const response = await fetch('/api/config');
                 const config = await response.json();
                 
-                // Apply colors
                 document.documentElement.style.setProperty('--primary', `#${config.primaryColor}`);
                 document.documentElement.style.setProperty('--secondary', `#${config.secondaryColor}`);
                 
-                // Helper for RGB conversion
                 const hexToRgb = hex => {
                     const r = parseInt(hex.slice(0, 2), 16);
                     const g = parseInt(hex.slice(2, 4), 16);
@@ -220,7 +214,6 @@ One File Customization, Easy Deploy, Fast Setup
                 };
                 document.documentElement.style.setProperty('--primary-rgb', hexToRgb(config.primaryColor));
 
-                // Apply text and links
                 document.getElementById('nav-web-name').textContent = config.webName;
                 document.getElementById('nav-logo').src = config.webLogoUrl;
                 document.getElementById('hero-web-name').textContent = config.webName;
